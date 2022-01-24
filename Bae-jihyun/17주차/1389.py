@@ -1,15 +1,13 @@
 '''
-1부터 N까지 돌아가며 각각 노드에서 출발해 모든 노드에 도착해야한다.
-15주차 9372번과 유사하다고 느낌
+케빈 베이컨 : 1부터 N까지 돌아가며 각각 노드에서 출발해 모든 노드에 도착해야한다.
 '''
-
 
 import sys
 from collections import deque
 input = sys.stdin.readline
 
 
-def bfs(graph, x):
+def bfs(x):
     ans = [0]*(N+1)  # ans의 인덱스 번호 = x가 도착해야 할 목적지
     q = deque([x])
     visited = set([x])
@@ -34,6 +32,6 @@ for _ in range(M):
 
 # 각 출발지마다 bfs 실행
 for i in range(1, N+1):
-    result.append(bfs(graph, i))
+    result.append(bfs(i))
 
 print(result.index(min(result))+1)
