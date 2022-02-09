@@ -19,7 +19,7 @@ for i in range(N):
 
 for i in lst:  # 각 동전의 가치
     for j in range(1, K + 1):  # 구해야 하는 가치의 합
-        if j - i >= 0:   # j-i < 0 = 동전의 가치 - 합 < 0 이므로 동전의 가치<합이면 결과는 0이어서 계산 x
+        if j - i >= 0:   # j-i < 0 = 동전의 가치 - 합 < 0 이므로 동전의 가치<합이면 결과는 0이어서 계산 o
             dp[j] += dp[j - i]  # 아래 풀이 참고
 print(dp[K])
 
