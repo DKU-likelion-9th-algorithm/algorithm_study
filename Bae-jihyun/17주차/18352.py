@@ -21,7 +21,6 @@ def bfs(x):
 N, M, K, X = map(int, input().split())
 graph = [[] for _ in range(N+1)]  # 입력 받을 그래프
 result = [0]*(N+1)  # x가 도착해야 할 목적지(result의 인덱스 번호)까지의 거리가 담김.
-# result를 dict로 만들 수 있을까요..? N+1사이즈, index를 키로 하는 dict를 생성하는 방법이 있을까요...?
 flag = False        # result 안에 K가 있음을 나타내는 표시
 
 # 단방향 그래프 입력받기
