@@ -46,7 +46,7 @@ for i in range(1, N+1):
     graph[i] = {}
     rev_graph[i] = {}
 
-for _ in range(M) :
+for _ in range(M):
     s, e, t = map(int, input().split())
     graph[s][e] = t
     rev_graph[e][s] = t
