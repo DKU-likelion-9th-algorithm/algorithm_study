@@ -37,7 +37,7 @@ for water in range(1, h):   # water: 물높이, 물 높이 N~100는 물에 잠�
             if ground[j][k] > water and board[j][k] == -1:
                 responce = responce + 1
                 cal(j, k)
-    result = min(result, responce)
+    result = max(result, responce)
     responce = 0
 
 print(result)
@@ -45,5 +45,5 @@ print(result)
 
 '''
 풀이 생각 과정
-2963번과 비슷하다고 생각한다. 다른 점은 board 초기화 위치인 것 같다.
+4963번과 비슷하다고 생각한다. 다른 점은 board 초기화 위치인 것 같다.
 '''

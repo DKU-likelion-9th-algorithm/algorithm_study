@@ -12,12 +12,13 @@ def dfs(node):
         if visited[t]:
             continue
         dfs(t)
+
         graph[node][0] += graph[t][1]
 
         # 현재 노드가 얼리 어답터인 경우, 연결된 친구들은 얼리 어답터이거나 아니어도 됨.
         # 즉, 얼리 어답터인 친구(자식)와 아닌 친구(자식) 중 최소인 경우를 더해줌.
         graph[node][1] += min(graph[t][0], graph[t][1])
-        print(node, t, graph)
+        # print(node, t, graph)
 
 
 # 입력받기
@@ -28,7 +29,6 @@ visited = [False] * (N + 1)
 for _ in range(N - 1):
     a, b = map(int, sys.stdin.readline().split())
     tree[a].append(b)
-    tree[b].append(a)
 
 graph = [[0, 0] for _ in range(N + 1)]
 
